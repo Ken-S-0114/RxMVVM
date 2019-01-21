@@ -7,8 +7,22 @@
 //
 
 import UIKit
+import GitHub
+import RxSwift
+import RxCocoa
 
 class SearchUserViewController: UIViewController {
+
+    @IBOutlet private weak var searchBar: UISearchBar!
+    @IBOutlet private weak var tableView: UITableView!
+
+    private lazy var viewModel = SearchUserViewModel(
+        searchBarText: searchBar.rx.text.asObservable(),
+        searchButtonClicked: searchBar.rx.searchButtonClicked.asObservable(),
+        itemSelected: tableView.rx.itemSelected.asObservable()
+    )
+
+    private let disposeBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()

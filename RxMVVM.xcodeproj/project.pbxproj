@@ -20,6 +20,7 @@
 		B228AD9521F59F1A00595549 /* SearchUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B228AD9421F59F1A00595549 /* SearchUserViewController.swift */; };
 		B228AD9721F59F3300595549 /* SearchUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B228AD9621F59F3300595549 /* SearchUserViewModel.swift */; };
 		B228AD9921F59F4800595549 /* SearchUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B228AD9821F59F4800595549 /* SearchUserModel.swift */; };
+		B228AD9B21F5A81600595549 /* User+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B228AD9A21F5A81600595549 /* User+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		B228AD9421F59F1A00595549 /* SearchUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUserViewController.swift; sourceTree = "<group>"; };
 		B228AD9621F59F3300595549 /* SearchUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUserViewModel.swift; sourceTree = "<group>"; };
 		B228AD9821F59F4800595549 /* SearchUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUserModel.swift; sourceTree = "<group>"; };
+		B228AD9A21F5A81600595549 /* User+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+Extension.swift"; sourceTree = "<group>"; };
 		B7ADB1B7FBE04833280733C6 /* Pods_RxMVVM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxMVVM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCAE96F7782D7C3DF5F2800F /* Pods_RxMVVMUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxMVVMUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE411F3AC3D50A48C1972EA9 /* Pods-RxMVVMUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxMVVMUITests.debug.xcconfig"; path = "Target Support Files/Pods-RxMVVMUITests/Pods-RxMVVMUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				B228AD9421F59F1A00595549 /* SearchUserViewController.swift */,
 				B228AD9621F59F3300595549 /* SearchUserViewModel.swift */,
 				B228AD9821F59F4800595549 /* SearchUserModel.swift */,
+				B228AD9A21F5A81600595549 /* User+Extension.swift */,
 			);
 			path = RxMVVM;
 			sourceTree = "<group>";
@@ -411,6 +414,7 @@
 				B228AD9521F59F1A00595549 /* SearchUserViewController.swift in Sources */,
 				B228AD9921F59F4800595549 /* SearchUserModel.swift in Sources */,
 				B228AD9721F59F3300595549 /* SearchUserViewModel.swift in Sources */,
+				B228AD9B21F5A81600595549 /* User+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
