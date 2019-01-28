@@ -33,7 +33,7 @@ final class UserCell: UITableViewCell {
                     guard let image = UIImage(data: imageData) else { return }
 
                     DispatchQueue.main.async {
-                        self?.imageView?.image = image
+                        self?.iconImageView?.image = image
                         self?.setNeedsLayout()
                     }
                 }

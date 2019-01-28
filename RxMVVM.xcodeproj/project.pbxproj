@@ -156,15 +156,12 @@
 			isa = PBXGroup;
 			children = (
 				B228AD6221F59B0500595549 /* AppDelegate.swift */,
+				B228AD9A21F5A81600595549 /* User+Extension.swift */,
 				B228AD6621F59B0500595549 /* Main.storyboard */,
 				B228AD6921F59B0500595549 /* Assets.xcassets */,
 				B228AD6B21F59B0500595549 /* LaunchScreen.storyboard */,
 				B228AD6E21F59B0500595549 /* Info.plist */,
-				B228AD9421F59F1A00595549 /* SearchUserViewController.swift */,
-				B228AD9621F59F3300595549 /* SearchUserViewModel.swift */,
-				B228AD9821F59F4800595549 /* SearchUserModel.swift */,
-				B228AD9A21F5A81600595549 /* User+Extension.swift */,
-				B228AD9C21FEDD1D00595549 /* SearchUser.storyboard */,
+				B228ADA221FEE5A900595549 /* SearchUser */,
 				B228AD9E21FEDDCF00595549 /* UserCell.xib */,
 				B228ADA021FEE06500595549 /* UserCell.swift */,
 			);
@@ -187,6 +184,17 @@
 				B228AD8421F59B0600595549 /* Info.plist */,
 			);
 			path = RxMVVMUITests;
+			sourceTree = "<group>";
+		};
+		B228ADA221FEE5A900595549 /* SearchUser */ = {
+			isa = PBXGroup;
+			children = (
+				B228AD9C21FEDD1D00595549 /* SearchUser.storyboard */,
+				B228AD9421F59F1A00595549 /* SearchUserViewController.swift */,
+				B228AD9621F59F3300595549 /* SearchUserViewModel.swift */,
+				B228AD9821F59F4800595549 /* SearchUserModel.swift */,
+			);
+			path = SearchUser;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
