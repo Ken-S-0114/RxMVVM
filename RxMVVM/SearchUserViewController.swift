@@ -27,18 +27,53 @@ class SearchUserViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-    }
-    
+        setup()
 
-    /*
-    // MARK: - Navigation
+        // ViewModel の値が変化したとき，リロードする
+        viewModel.deselectRow
+            .bind(to: deselectRow)
+            .disposed(by: disposeBag)
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        // ViewModel の値が変化したとき，リロードする
+        viewModel.reloadData
+            .bind(to: reloadData)
+            .disposed(by: disposeBag)
     }
-    */
+
+    private func setup() {
+        tableView.estimatedRowHeight = 64
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.register(UINib(nibName: "UserCell", bundle: nil), forCellReuseIdentifier: "UserCell")
+    }
+
+}
+
+extension SearchUserViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.users.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "UserCell") as! UserCell
+
+        let user = viewModel.users[indexPath.row]
+        cell.configure(user: user)
+        return cell
+    }
+}
+
+extension SearchUserViewController {
+    private var deselectRow: Binder<IndexPath> {
+        return Binder(self) { me, indexPath in
+            me.tableView.deselectRow(at: indexPath, animated: true)
+        }
+    }
+
+    private var reloadData: Binder<Void> {
+        return Binder(self) { me, _ in
+            me.tableView.reloadData()
+        }
+    }
+
 
 }
